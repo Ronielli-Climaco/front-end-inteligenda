@@ -31,3 +31,16 @@ h2 {
     text-align: center;
     padding: 12px;
 }
+
+.agendamento-form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.option-button {
+    padding: 10px;
+    margin-bottom: 12px;
+}
