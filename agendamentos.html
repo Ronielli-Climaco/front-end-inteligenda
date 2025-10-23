@@ -8,6 +8,11 @@
 </head>
 
 <body>
+    <div class="nav-buttons">
+        <button class="option-button"><a href="index.html">Início</a></button>
+        <button class="option-button"><a href="consultas.html">Meus Agendamentos</a></button>
+    </div>
+
     <div class="header">
        
         <a href="index.html"><h1>Inteligenda</h1></a>
@@ -38,6 +43,10 @@
                 <option value="18:00">18:00</option>
             </select>
             
+            <label for="nome-cliente">Nome:</label>
+            <input type="text" id="nome-cliente" class="option-button" name="nome-cliente">
+            <label for="tel-cliente">Telefone:</label>
+            <input type="tel" id="tel-cliente" class="option-button" name="tel-cliente" placeholder="(XX) X XXXX XXXX" required> 
             <button type="submit" class="option-button">Agendar</button>
             
         </form>

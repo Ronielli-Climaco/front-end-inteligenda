@@ -49,3 +49,9 @@ a {
     padding: 10px;
     margin-bottom: 12px;
 }
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
