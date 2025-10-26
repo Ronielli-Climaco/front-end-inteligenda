@@ -10,12 +10,22 @@ document.addEventListener("DOMContentLoaded", function() {
         const data = form['data-selecionada'].value;
         const horario = form['horario-selecionado'].value;
 
-        
+        // Limpa campos de texto
+        form.reset();
+
+        // Limpa os selects com Choices.js
+        escolhaBarbeiro.clearStore();
+        escolhaHorario.clearStore();
+
+        // Limpa o Flatpickr
+        const datePicker = document.querySelector('#data-selecionada')._flatpickr;
+        datePicker.clear();
 
         const confirmar = confirm(`Deseja confirmar o agendamento com ${barbeiro} em ${data} às ${horario}?`);
         if (!confirmar) {
             mensagem.textContent = "Agendamento cancelado.";
             mensagem.style.color = "red";
+            mensagem.style.textAlign = "center";
             return; 
         }
 
