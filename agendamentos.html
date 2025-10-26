@@ -8,6 +8,10 @@
     <!-- Tema Material Blue -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css">
 
+    <!-- CSS do Choices -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+
+
     <link rel="stylesheet" href="agendamentos.css">
     <link rel="icon" href="img\icone.png">
     <title>Inteligenda</title>
@@ -24,6 +28,7 @@
             
             <label for="Barbeiro" class="option-label">Barbeiro:</label>
             <select class="option-button" id="Barbeiro" name="Barbeiro">
+                <option value="">Escolha um Barbeiro</option>
                 <option value="Barbeiro 1">Barbeiro 1</option>
                 <option value="Barbeiro 2">Barbeiro 2</option>
                 <option value="Barbeiro 3">Barbeiro 3</option>
@@ -34,6 +39,7 @@
             
             <label for="horario-selecionado" class="option-label">Horário:</label>
             <select class="option-button" id ="horario-selecionado" name="horario-selecionado">
+                <option value="">Escolha um Horário</option>
                 <option value="08:00">08:00</option>
                 <option value="09:00">09:00</option>
                 <option value="10:00">10:00</option>
@@ -45,9 +51,9 @@
                 <option value="17:00">17:00</option>
                 <option value="18:00">18:00</option>
             </select>
-            
+
             <label for="nome-cliente" class="option-label">Nome:</label>
-            <input type="text" id="nome-cliente" class="option-button" name="nome-cliente">
+            <input type="text" id="nome-cliente" class="option-button" placeholder="Digite seu nome" name="nome-cliente">
             <label for="tel-cliente" class="option-label">Telefone:</label>
             <input type="tel" id="tel-cliente" class="option-button" name="tel-cliente" placeholder="(XX) X XXXX XXXX" required> 
             <button type="submit" class="option-button">Agendar</button>
@@ -59,6 +65,7 @@
 
     </div>
 
+    <!-- JS do Flatpickr -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <!-- Tradução para português -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
@@ -80,6 +87,25 @@
 
         });
     </script>
+
+    <!-- JS do Choices -->
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <script>
+        // Inicializa o Choices nos selects desejados
+        const escolhaBarbeiro = new Choices('#Barbeiro', {
+            searchEnabled: false, // desativa a busca (opcional)
+            itemSelectText: '',   // remove o texto "Press to select"
+            shouldSort: false     // mantém a ordem original das opções
+        });
+
+        const escolhaHorario = new Choices('#horario-selecionado', {
+            searchEnabled: false,
+            itemSelectText: '',
+            shouldSort: false
+        });
+    </script>
+
 
     <script src="agendamento.js" defer></script>
 </body>

@@ -39,7 +39,8 @@ a {
 }
 
 .option-button {
-    padding: 10px;
+    font-size: 0.8em;
+    padding: 13px;
     margin-bottom: 12px;
 }
 

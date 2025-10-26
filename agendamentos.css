@@ -51,7 +51,8 @@ a {
 }
 
 .option-button {
-    padding: 10px;
+    font-size: 0.8em;
+    padding: 13px;
     margin-bottom: 12px;
 }
 
@@ -63,4 +64,34 @@ a {
 
 .logo {
     max-width: 40%;
+}
+    
+.choices {
+    margin: 0;
+    width: 100%;
+     
+}
+
+.choices__inner {
+    background-color: #fff;
+    border: 1px solid #7a7a7a;
+    color: #000000;
+    font-size: 0.8em;
+    margin-bottom: 12px;
+    max-width: 100%;
+    box-sizing: border-box; /* garante que borda + padding não quebrem o layout */
+}
+
+.choices__list--single {
+    padding: 6px;
+}
+
+.choices__item--selectable.is-highlighted {
+    background-color: #1976d2 !important;
+    color: #fff !important;
+    font-size: 0.8em;
+    padding: 10px;
+    margin-bottom: 12px;
+    max-width: 100%;
+    outline: 1px solid black
 }
