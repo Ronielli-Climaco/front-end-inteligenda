@@ -4,32 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="agendamentos.css">
+    <link rel="icon" href="img\icone.png">
     <title>Inteligenda</title>
 </head>
 
 <body>
-    <div class="nav-buttons">
-        <button class="option-button"><a href="index.html">Início</a></button>
-        <button class="option-button"><a href="consultas.html">Meus Agendamentos</a></button>
-    </div>
-
     <div class="header">
        
-        <a href="index.html"><h1>Inteligenda</h1></a>
+
+        <a href="index.html"> <img src="img\logo.png" class="logo" alt="logo"></a>
         <h2>Selecione uma das opções abaixo:</h2>
     </div>
 
     <div>
         <form class="agendamento-form" action="agendamentos" method="post">
             
+            <label for="Barbeiro" class="option-label">Barbeiro:</label>
             <select class="option-button" id="Barbeiro" name="Barbeiro">
                 <option value="Barbeiro 1">Barbeiro 1</option>
                 <option value="Barbeiro 2">Barbeiro 2</option>
                 <option value="Barbeiro 3">Barbeiro 3</option>
             </select>
 
+            <label for="data-selecionada" class="option-label">Data:</label>
             <input type="date" id="data-selecionada" class="option-button" name="data-selecionada">
             
+            <label for="horario-selecionado" class="option-label">Horário:</label>
             <select class="option-button" id ="horario-selecionado" name="horario-selecionado">
                 <option value="08:00">08:00</option>
                 <option value="09:00">09:00</option>
@@ -43,11 +43,12 @@
                 <option value="18:00">18:00</option>
             </select>
             
-            <label for="nome-cliente">Nome:</label>
+            <label for="nome-cliente" class="option-label">Nome:</label>
             <input type="text" id="nome-cliente" class="option-button" name="nome-cliente">
-            <label for="tel-cliente">Telefone:</label>
+            <label for="tel-cliente" class="option-label">Telefone:</label>
             <input type="tel" id="tel-cliente" class="option-button" name="tel-cliente" placeholder="(XX) X XXXX XXXX" required> 
             <button type="submit" class="option-button">Agendar</button>
+            <button class="option-button"><a href="index.html">Voltar</a></button>
             
         </form>
 

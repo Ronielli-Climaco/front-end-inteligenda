@@ -4,20 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="consultas.css">
+    <link rel="icon" href="img\icone.png">
+
     <title>Inteligenda</title>
+
 </head>
 
 <body>
-    <div class="nav-buttons">
-        <button class="option-button"><a href="index.html">Início</a></button>
-        <button class="option-button"><a href="agendamentos.html">Novo Agendamento</a></button>
-    </div>
-
+    
     <div class="header">
-        <h1>Inteligenda</h1>
+        <a href="index.html"> <img src="img\logo.png" class="logo" alt="logo"></a>
         <h2>Selecione uma das opções abaixo:</h2>
     </div>
 
+    <div>
+        <form class="consulta-form" action="consultas" method="post">
+            
+            <label for="tel-cliente" class="option-label">Telefone:</label>
+            <input type="tel" id="tel-cliente" class="option-button" name="tel-cliente" placeholder="(XX) X XXXX XXXX" required> 
+            <button type="submit" class="option-button">Consultar</button>
+            <button class="option-button"><a href="index.html">Voltar</a></button>
+
+        </form>
+        
+        <div id="mensagem" style="margin-top: 12px; font-weight: 600;"></div>
+
+    </div>
 
 </body>
 

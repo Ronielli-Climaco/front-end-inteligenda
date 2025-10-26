@@ -48,3 +48,15 @@ a {
     justify-content: center;
     gap: 10px;
 }
+
+.consulta-form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.logo {
+    max-width: 40%;
+}

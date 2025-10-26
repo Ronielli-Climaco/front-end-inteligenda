@@ -48,3 +48,7 @@ form {
     padding: 10px;
     margin-bottom: 12px;
 }
+
+.logo {
+    max-width: 40%;
+}
