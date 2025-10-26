@@ -45,6 +45,11 @@ a {
     margin: 0 auto;
 }
 
+.option-label {
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
 .option-button {
     padding: 10px;
     margin-bottom: 12px;

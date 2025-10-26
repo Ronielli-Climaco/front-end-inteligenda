@@ -57,6 +57,10 @@ a {
     margin: 0 auto;
 }
 
+.option-label {
+    margin-bottom: 5px;
+}
+
 .logo {
     max-width: 40%;
 }
