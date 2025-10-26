@@ -58,7 +58,8 @@ a {
 }
 
 .option-label {
-    margin-bottom: 5px;
+    margin: 3px;
+    font-size: 1rem;
 }
 
 .logo {

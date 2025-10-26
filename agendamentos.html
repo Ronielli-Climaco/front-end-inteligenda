@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- Tema Material Blue -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css">
+
     <link rel="stylesheet" href="agendamentos.css">
     <link rel="icon" href="img\icone.png">
     <title>Inteligenda</title>
@@ -25,7 +30,7 @@
             </select>
 
             <label for="data-selecionada" class="option-label">Data:</label>
-            <input type="date" id="data-selecionada" class="option-button" name="data-selecionada">
+            <input type="text" id="data-selecionada" class="option-button" name="data-selecionada" placeholder="Escolha uma data:">
             
             <label for="horario-selecionado" class="option-label">Horário:</label>
             <select class="option-button" id ="horario-selecionado" name="horario-selecionado">
@@ -53,6 +58,28 @@
         <div id="mensagem" style="margin-top: 12px; font-weight: 600;"></div>  
 
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Tradução para português -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
+    <script>
+        flatpickr("#data-selecionada", {
+            dateFormat: "d/m/Y", // formato da data
+            locale: "pt",        // idioma português
+            altInput: true,      // exibe formato alternativo
+            altFormat: "l, d \\de F \\de Y", // formato legível: sábado, 25 de outubro de 2025
+            minDate: "today",    // bloqueia datas anteriores a hoje
+            theme: "material_blue",
+
+            disable: [
+                function(date) {
+                // getDay() retorna 0 para domingo
+                return (date.getDay() === 0);
+                }
+            ],
+
+        });
+    </script>
 
     <script src="agendamento.js" defer></script>
 </body>
